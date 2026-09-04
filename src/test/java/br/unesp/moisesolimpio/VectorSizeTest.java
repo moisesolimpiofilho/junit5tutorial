@@ -8,12 +8,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class VectorEqualTest {
+public class VectorSizeTest {
 
     private static int v1[];
     private static int v2[];
 
-    public VectorEqualTest() {
+    public VectorSizeTest() {
 
     }
 
@@ -32,11 +32,10 @@ public class VectorEqualTest {
     }
 
     @Test
-    void testEqual() {
-        System.out.println("Os valores são iguais?");
+    void testSize() {
+        System.out.println("Os vetores tem o mesmo tamanho?");
         boolean expResult = true;
-        boolean result = Vector.equal(v2, v1);
+        boolean result = Vector.size(v1.length, v2.length);
         assertEquals(expResult, result);
     }
-
 }
